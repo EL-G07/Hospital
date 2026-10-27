@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital-Kiganjani</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Karibu Hospitali Kiganjani</h1>
+<div class="login-container">
+<div class="login-form">
+    <h2>Login</h2>
+    <form method="post" action="/" novalidate>
+
+            <label for="user_name" >Username</label>
+            <input id="user_name" name="user_name" placeholder="Johnson_" type="text" maxlength="50" required>
+
+
+            <label for="password" >Password</label>
+            <input id="password" name="password" type="password" required>
+            <button type="button" onclick="tooglepassword()" id="tooglebtn">Show</button>
+
+        <div class="remember">
+            <label for="remember">Remember me</label>
+            <input id="remember" name="remember" type="checkbox" value="True" >
+        </div>
+        <a href="#">Forgot password</a>
+        <p class="signup-text">Don't have an account?
+        <a href="#">Sign up</a>
+         </p>
+        <button type="submit" disabled>Login</button>
+
+    </form>
+</div>
+</div>
+<script>
+    function tooglepassword(){
+        let password=document.getElementById("password");
+        let button=document.getElementById("tooglebtn");
+        if(password.type=="password")
+        {password.type="text"
+         button.textContent="Hide"
+        } else {password.type="password"
+                button.textContent="Show"
+        }
+    }
+</script>
+</body>
+</html>
